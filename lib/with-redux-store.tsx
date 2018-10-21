@@ -4,7 +4,7 @@ import { initializeStore } from '../store';
 const isServer = typeof window === 'undefined';
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__';
 
-function getOrCreateStore(initialState) {
+function getOrCreateStore(initialState?) {
     // Always make a new store if server, otherwise state is shared between requests
     if (isServer) {
         return initializeStore(initialState);
@@ -42,6 +42,8 @@ export default App => {
             super(props);
             this.reduxStore = getOrCreateStore(props.initialReduxState);
         }
+
+        public reduxStore;
 
         render() {
             return <App {...this.props} reduxStore={this.reduxStore} />;

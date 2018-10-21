@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { incrementCount, decrementCount, resetCount } from '../actions';
 
-class Counter extends Component {
+interface Props {
+    dispatch: Dispatch<any>;
+    count: number;
+}
+
+class Counter extends Component<Props> {
     increment = () => {
         const { dispatch } = this.props;
         dispatch(incrementCount());

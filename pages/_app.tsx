@@ -3,7 +3,11 @@ import React from 'react';
 import withReduxStore from '../lib/with-redux-store';
 import { Provider } from 'react-redux';
 
-class MyApp extends App {
+interface Props {
+    reduxStore: any;
+}
+
+class MyApp extends App<Props> {
     render() {
         const { Component, pageProps, reduxStore } = this.props;
         return (
