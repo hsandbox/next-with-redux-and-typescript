@@ -12,7 +12,7 @@ export const exampleInitialState = {
 export function initializeStore(initialState = exampleInitialState) {
     return createStore(
         reducer,
-        initialState,
+        initialState as object,
         composeWithDevTools(applyMiddleware(thunkMiddleware)),
     );
 }
