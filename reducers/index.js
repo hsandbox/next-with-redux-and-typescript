@@ -1,13 +1,5 @@
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunkMiddleware from 'redux-thunk';
-import { actionTypes } from './actions';
-
-const exampleInitialState = {
-    lastUpdate: 0,
-    light: false,
-    count: 0,
-};
+import { exampleInitialState } from '../store';
+import { actionTypes } from '../actions';
 
 // REDUCERS
 export const reducer = (state = exampleInitialState, action) => {
@@ -33,11 +25,3 @@ export const reducer = (state = exampleInitialState, action) => {
             return state;
     }
 };
-
-export function initializeStore(initialState = exampleInitialState) {
-    return createStore(
-        reducer,
-        initialState,
-        composeWithDevTools(applyMiddleware(thunkMiddleware)),
-    );
-}
