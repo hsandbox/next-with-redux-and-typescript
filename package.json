@@ -1,5 +1,5 @@
 {
-  "name": "next-typescript-redux-test",
+  "name": "next-with-redux-and-typescript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hirofumii/next-typescript-redux-test.git"
+    "url": "git+https://github.com/hirofumii/next-with-redux-and-typescript.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hirofumii/next-typescript-redux-test/issues"
+    "url": "https://github.com/hirofumii/next-with-redux-and-typescript/issues"
   },
-  "homepage": "https://github.com/hirofumii/next-typescript-redux-test#readme",
+  "homepage": "https://github.com/hirofumii/next-with-redux-and-typescript#readme",
   "dependencies": {
     "@zeit/next-typescript": "^1.1.1",
     "next": "^7.0.2",
